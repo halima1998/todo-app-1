@@ -1,15 +1,5 @@
 import React from 'react';
 import axios from "axios";
-// import {Link, Redirect} from "react-router-dom";
-// import loginImg from "../../login.svg";
-// export {Register} from './register';
-import {History, useHistory} from "react-router";
-import Login from "./login";
-import {BrowserRouter as Router,Link,Switch,Route, Redirect  } from 'react-router-dom';
-import router from '../../todo-app-master/router/route';
-import history from "./components/history"
-// import { Redirect } from 'react-router-dom';
-
 
 
 class Register extends React.Component {
@@ -22,49 +12,24 @@ class Register extends React.Component {
       email:'',
       password:''
     }
-//     state = { redirect: null };
-// render() 
-//   if (this.state.redirect) {
-//     return( <Redirect to={this.state.redirect} />
-    
-//     );
-//   }
   
   // Your Code goes here
   
-
-
-
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handelChange = this.handelChange.bind(this);
-    function loginPage (){
-      const history = useHistory;
-    }
-
+  // this.handleSubmit = this.handleSubmit.bind(this);
+  // this.handelChange = this.handelChange.bind(this);
   }     
-  handleSubmit() {
-      // event.preventDefault();
-      history.push("/login")
-
-  //     <Link to = "/login">login</Link>
-      //  try {
-      //    await Auth.register(name,last_name,userName,email,password);
-      //    userHasAuthentication(true);
-      //    history.push("/login");
-      //  } catch (e){
-      //    alert(e.message);
-      //  }
   
-      console.log (this.state)
-      axios.post("singUp", this.state)
-      .then(res => {
-        console.log(res)
-        console.log(res.data);
-        return <Link to={"/login"} ></Link>
-      }).catch((err) => {
+  handleSubmit = () => {
+
+    const { history } = this.props;
+
+    axios.post("singUp", this.state)
+    .then(res => {
+      console.log(res)
+      history.push('/login')
+    }).catch((err) => {
         console.log (err)
-      })
-      
+    })  
     }
     
     handelChange = (event) => {
@@ -76,6 +41,7 @@ class Register extends React.Component {
     
     render(){
       // console.log (this.state)
+      console.log(this.props, "Pralhad")
         return (
         <div className="base-container">
             <div className="container1">
@@ -105,18 +71,6 @@ class Register extends React.Component {
                  </div>
             </div>
             <div className="footer">
-            {/* <Link to={'/Login'} className="nav-link">Login</Link>    
-            <Router>
-              <Link to={'/Signup'} className="nav-link">Register From</Link>
-              <Switch>    
-                 <Route  path='/login' component={Login} />    
-                 <Route exact path='/register' component={Register} />    
-       
-              </Switch>    
-  
-            </Router>   */}
-
-
               <button type="button"className="btn" onClick={this.handleSubmit}>
                 Register
               </button>
