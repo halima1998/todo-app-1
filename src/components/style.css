@@ -72,7 +72,7 @@ input{
     padding: 0px 10px;
     font-size: 16px;
     font-family: "Open Sans",sans-serif;
-    border:2;
+    border:2 solid;
     border-radius: 4px;
     transition: all 250ms ease-in-out;
     width:265px;
@@ -101,4 +101,17 @@ input{
   .btn:hover {
     background-color: white;
     color:black;
+  }
+  textarea{
+    color: darkorange;
+    margin-top: 6px;
+    margin: 6px 10px;
+    height:200px;
+    padding: 0px 10px;
+    font-size: 16px;
+    font-family: "Open Sans",sans-serif;
+    border:2;
+    border-radius: 4px;
+    transition: all 250ms ease-in-out;
+    width:500px;
   }
