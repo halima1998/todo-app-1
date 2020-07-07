@@ -1,5 +1,7 @@
 import React from 'react';
-import axios from "axios";
+import axios from "axios"; // fetch, request, xmlHTTPrequest, AJAX.
+
+
 
 const intialState = {
   name: '',
@@ -103,15 +105,16 @@ class Register extends React.Component {
                      </div>
                  </div>
             </div>
-            <div className="footer">
-              <button type="button"className="btn" onClick={this.handleSubmit}>
-                Register
+          
+          <div className="footer">
+            <button type="button" className="btn" onClick={this.handleSubmit}>
+              Register
               </button>
-            </div>
-            </div>
-        </div> 
-        );
-    }
+          </div>
+          </div>
+        </div>
+    );
+  }
 }
 
 
