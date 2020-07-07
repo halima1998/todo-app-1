@@ -6,7 +6,7 @@ const intialState = {
   email:'',
   password:''
 }
-class Register extends React.Component {
+class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = intialState;
@@ -89,4 +89,4 @@ class Register extends React.Component {
 }
 
 
-export default Register;
+export default Login;
