@@ -42,7 +42,7 @@ class Login extends React.Component {
     axios.post("verify", {}, config)
     .then((res2) => {
       localStorage.setItem("user", JSON.stringify(res2.data.user))
-      history.push('/todo_list', {todo: res2.data.todo})
+      history.push('/list', {todo: res2.data.todo})
     })
     }).catch((err) => {
         console.log (err)
@@ -59,8 +59,6 @@ class Login extends React.Component {
     }
     
     render(){
-    let {isload, items} = this.state;
-
         return (
         <div className="base-container">
             <div className="container">

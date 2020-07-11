@@ -4,12 +4,11 @@ import './App.css';
 import "./components/style.css";
 import { BrowserRouter as  Switch, Route, Router } from 'react-router-dom';
 // import  { register} from "./components/index";
-import TodoList from "./components/todoList";
 import Login from "./components/login";
 import Register from "./components/register"
 import LandingPage from "./components/landingPage"
 import history from "./utils/history";
-import list from "./components/list";
+import todoList from "./components/todoList";
 
 
 
@@ -27,8 +26,7 @@ function Approuter() {
         <Route path="/" exact component={LandingPage} />
         <Route path="/register" component={Register} />
         <Route path="/login"  component={Login} />
-        <Route path="/todo_list" component={TodoList} />
-        <Route path="/list" component={list} />
+        <Route path="/list" component={todoList} />
       </Switch>
       </Router>
   )

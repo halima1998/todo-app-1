@@ -43,8 +43,13 @@ class Register extends React.Component {
     if(isvalid) {
     axios.post("signUp", this.state)
     .then(res => {
-      console.log(res)
-      history.push('/login')
+      console.log(res.data)
+      if(res.data){
+        history.push('/login')
+      }
+      else{
+        alert("email address is already exist")
+      }
     }).catch((err) => {
         console.log (err)
     })  
@@ -61,8 +66,6 @@ class Register extends React.Component {
     }
     
     render() {
-      // console.log (this.state)
-      // console.log(this.props, "Pralhad")
         return (
         <div className="base-container">
             <div className="container1">
