@@ -3,22 +3,15 @@ import React from 'react';
 import './App.css';
 import "./components/style.css";
 import { BrowserRouter as  Switch, Route, Router } from 'react-router-dom';
-// import  { register} from "./components/index";
-import TodoList from "./components/todoList";
+import TodoList from "./components/TodoList";
 import Login from "./components/login";
 import Register from "./components/register"
-import LandingPage from "./components/landingPage"
+import LandingPage from "./components/landingPage";
 import history from "./utils/history";
-import list from "./components/list";
+// import TodoForm from "./components/todoForm";
 
 
 
-// function TodoList(props) {
-//     console.log(props)
-//     return (<div>
-//       <p>Welcome to todo application</p>
-//     </div>)
-// }
 
 function Approuter() { 
   return (
@@ -27,8 +20,9 @@ function Approuter() {
         <Route path="/" exact component={LandingPage} />
         <Route path="/register" component={Register} />
         <Route path="/login"  component={Login} />
-        <Route path="/todo_list" component={TodoList} />
-        <Route path="/list" component={list} />
+        <Route path="/todoList" component={TodoList} />
+        {/* <Route path="/list" component={list} /> */}
+        {/* <Route path="/listItems" component={ListItems}/> */}
       </Switch>
       </Router>
   )
