@@ -1,22 +1,38 @@
 import React from 'react';
 import axios from "axios";
 
+const intialState = {
+  email:'',
+  password:'',
+  items: [],
+  load: false
+}
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      email: '',
-      password: '',
-      items: [],
-      load: false
-    }
+    this.state = intialState;
   }     
-  
+  validate = () =>{
+    let  emailError = "";
+    let  passwordError = "";
+    if(!this.state.password){
+       passwordError = "enter your password";
+    }
+    if(!this.state.email.includes('@')){
+      emailError = "invalid email"
+    }
+    if(emailError || passwordError){
+      this.setState({emailError, passwordError});
+      return false;
+    }
+    return true;
+   } 
   handleSubmit = () => {
     const {email, password} = this.state;
     const { history } = this.props;
-
+    const isvalid = this.validate();
+    if(isvalid) {
     axios.post("login", this.state)
     .then(res => {
       localStorage.setItem("token", res.data.token)
@@ -26,12 +42,17 @@ class Login extends React.Component {
     axios.post("verify", {}, config)
     .then((res2) => {
       localStorage.setItem("user", JSON.stringify(res2.data.user))
+<<<<<<< HEAD
       history.push('/TodoList', {todo: res2.data.todo})
+=======
+      history.push('/list', {todo: res2.data.todo})
+>>>>>>> 058aa92edaca9d103efd12f0435fe3cdfd76ae6e
     })
     }).catch((err) => {
         console.log (err)
     })
-
+    this.setState(intialState); 
+  }
     }
     
     handelChange = (event) => {
@@ -42,8 +63,6 @@ class Login extends React.Component {
     }
     
     render(){
-    let {isload, items} = this.state;
-
         return (
         <div className="base-container">
             <div className="container">
@@ -55,10 +74,17 @@ class Login extends React.Component {
                        <input type="email" name="email" 
                        value= {this.state.email} required placeholder="Email_address" 
                        onChange= {this.handelChange}/>
+                        <div className="text">
+                          {this.state.emailError}
+                          </div>
                      </div>
                      <div className="form-group">
                        <label htmlFor="password">Password</label>
-                       <input type="password" value= {this.state.password} name="password" required placeholder="Password" onChange= {this.handelChange} />
+                       <input type="password" value= {this.state.password} name="password" 
+                       required placeholder="Password" onChange= {this.handelChange} />
+                        <div className="text">
+                          {this.state.passwordError}
+                          </div>
                      </div>
                  </div>
             </div>
