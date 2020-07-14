@@ -17,13 +17,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "redirect": "^0.2.0",
-<<<<<<< HEAD
     "shortid": "^2.2.15",
     "storage": "^0.2.0"
-=======
-    "storage": "^0.2.0",
-    "uuid": "^8.2.0"
->>>>>>> 058aa92edaca9d103efd12f0435fe3cdfd76ae6e
   },
   "scripts": {
     "start": "react-scripts start",
