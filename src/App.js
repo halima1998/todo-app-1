@@ -1,4 +1,5 @@
 import React from 'react';
+import "/home/mkhalil/Projects/todo/node_modules/bootstrap/scss/bootstrap.scss";
 // import logo from './logo.svg';
 import './App.css';
 import "./components/style.css";
@@ -8,6 +9,7 @@ import Register from "./components/register"
 import LandingPage from "./components/landingPage";
 import history from "./utils/history";
 import TodoList from "./components/TodoList";
+
 
 
 

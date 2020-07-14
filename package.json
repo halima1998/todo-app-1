@@ -10,6 +10,7 @@
     "bootstrap": "^4.5.0",
     "env": "0.0.2",
     "local": "^0.3.3",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-global-event-listener": "^3.0.0",
