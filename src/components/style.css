@@ -130,3 +130,8 @@ input{
     background-color: white;
     color:black;
   }
+  .delete{
+    display: "flex";
+    text-align: center;
+  }
+  

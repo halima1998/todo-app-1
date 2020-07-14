@@ -1,6 +1,5 @@
-import React from 'react';
-import shortid from 'shortid';
 
+<<<<<<< HEAD
 class TodoForm extends React.Component{
     state ={
         todo:''
@@ -44,4 +43,30 @@ class TodoForm extends React.Component{
     }
 }
 
+=======
+import React, { useState } from "react";
+function TodoForm({ addTodo }) {
+    const [value, setValue] = useState("");
+  
+    const handleSubmit = e => {
+      e.preventDefault();
+      if (!value) return;
+      addTodo(value);
+      setValue("");
+    };
+  
+    return (
+      <form onSubmit={handleSubmit}>
+       <span> <input
+          type="text"
+          className="input"
+          value={value}
+          onChange={e => setValue(e.target.value)}
+        />
+         <div className="footer">
+         <button className="btn">Add Todo</button></div></span>
+      </form>
+    );
+  }
+>>>>>>> 52d60b565d07a1ae1eeb5b6039585f29236a3905
 export default TodoForm;

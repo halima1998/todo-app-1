@@ -3,9 +3,7 @@ import axios from "axios";
 
 const intialState = {
   email:'',
-  password:'',
-  items: [],
-  load: false
+  password:''
 }
 
 class Login extends React.Component {
