@@ -1,13 +1,12 @@
 
-import React, { useState } from "react";
+import React from "react";
 function Todo({ todo, index, completeTodo, removeTodo }) {
     return (
       <div
         className="todo"
-        style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
+        // style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
       >
-        {todo.text}
-  
+        {todo}
         <div>
           <button onClick={() => completeTodo(index)}>Complete</button>
           <button onClick={() => removeTodo(index)}>x</button>
