@@ -7,8 +7,14 @@ import Login from "./components/login";
 import Register from "./components/register"
 import LandingPage from "./components/landingPage";
 import history from "./utils/history";
-import TodoList from "./components/TodoList";
+import Home from "./components/list/home";
+import About from "./components/list/about";
+import Contact from "./components/list/contact";
 import AllTodo from "./components/AllTodo"
+import app from "./components/app";
+import"../node_modules/bootstrap/dist/css/bootstrap.css";
+
+
 
 function Approuter() { 
   return (
@@ -17,8 +23,10 @@ function Approuter() {
         <Route path="/" exact component={LandingPage} />
         <Route path="/register" component={Register} />
         <Route path="/login"  component={Login} />
-        <Route path="/todoList" component={TodoList} />
-        <Route path="/allTodo" component={AllTodo}></Route>
+        <Route path="/todo" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/app" component={app}></Route>
       </Switch>
       </Router>
   )
