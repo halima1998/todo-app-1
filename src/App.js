@@ -9,6 +9,7 @@ import Register from "./components/register"
 import LandingPage from "./components/landingPage";
 import history from "./utils/history";
 import TodoList from "./components/TodoList";
+import List from "./components/list";
 
 
 
@@ -22,6 +23,7 @@ function Approuter() {
         <Route path="/register" component={Register} />
         <Route path="/login"  component={Login} />
         <Route path="/todoList" component={TodoList} />
+        <Route path="/list" component={List} />
       </Switch>
       </Router>
   )

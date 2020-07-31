@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "../App.css";
 import Todo from './Todo';
 import TodoForm from './TodoForm';
-import axios from 'axios'
+import axios from 'axios';
 
-function TodoList() {
+function TodoList(props) {
   const [todos, setTodos] = useState([])
-
   const addTodo = text=> {
     const newTodos = [...todos, { text }];
     setTodos(newTodos);
@@ -26,17 +25,35 @@ function TodoList() {
     const newTodos = [...todos];
     newTodos[index].isCompleted = true;
     setTodos(newTodos);
-  };
-
-  const removeTodo = index => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
-    axios.delete(`/delet/todo/${index.id}`)
-        .then(res => {
-            console.log(res)
+    axios.post(`completed/todo${index.id}`)
+        .then((data) => {
+            console.log(data)
         })
   };
+
+  const removeTodo = index=> {
+    if(window.confirm("are you sure")){
+    const newTodos = [...todos];
+    let del_data=newTodos[index].text
+    newTodos.splice(index,1);
+    setTodos(newTodos)
+    axios.delete('/delete:id',{
+      data:del_data
+    })
+    .then((res) => {
+        console.log(res.data)
+    })
+  
+    }
+  }
+    // const editTodo=( todoId , newTask )=> {
+  //   console.log(todoId)
+  //   const updateTodos = todos.map((todo) =>
+  //   todo.id===todoId? {...todo, task:newTask}:
+  //    todo
+  //   )
+  //   setTodos(updateTodos)
+  // };
 
   return (
     <div className="app">
@@ -49,11 +66,14 @@ function TodoList() {
             todo={todo}
             completeTodo={completeTodo}
             removeTodo={removeTodo}
+            // editTodo={editTodo}
           />
         ))}
+        
         <TodoForm addTodo={addTodo} />
+          
       </div>
-    </div>
+</div>
   );
 }
 
