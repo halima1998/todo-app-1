@@ -3,9 +3,7 @@ import axios from "axios";
 
 const intialState = {
   email:'',
-  password:'',
-  items: [],
-  load: false
+  password:''
 }
 
 class Login extends React.Component {
@@ -42,7 +40,7 @@ class Login extends React.Component {
     axios.post("verify", {}, config)
     .then((res2) => {
       localStorage.setItem("user", JSON.stringify(res2.data.user))
-      history.push('/TodoList', {todo: res2.data.todo})
+      history.push('/allTodo', {todo: res2.data.todo})
     })
     }).catch((err) => {
         console.log (err)

@@ -10,16 +10,18 @@
     height: 355px;
     width: 310px;
     border-radius: 15px;
-	box-shadow: 0 0 0 0.2rem rgb(135, 241, 215);
-    background-color: rgb(153, 115, 10);
+    box-shadow: 3px 3px 3px 3px gray ;
+	/* box-shadow: 0 0 0 0.2rem rgb(135, 241, 215); */
+    background-color: rgb(154, 243, 236);
     border: 4px solid;
     border-color: darkorange;
 }
 .container1{
-    margin-top:20px;
+    margin-top:10px;
     width: 310px;
     border-radius: 15px;
-	box-shadow: 0 0 0 0.2rem rgb(135, 241, 215);
+    box-shadow: 3px 3px 3px 3px gray ;
+	/* box-shadow: 0 0 0 0.2rem rgb(135, 241, 215); */
     background-color: rgb(160, 250, 227);
     height: 580px;
     border: 4px solid;
@@ -37,20 +39,21 @@
     margin-left: 350px;
 }
 
-.container3{
+/* .container3{
     margin-top:5px;
     margin-left:0px;
     height:350px;
     width: 550px; 
     border-radius: 15px;
-	box-shadow: 0 0 0 0.2rem rgb(135, 241, 215);
-    background-color: rgb(160, 250, 227);
-    border: 4px solid;
-    border-color: darkorange;
-    padding: 30px;
+    /* box-shadow:3px 3px 3px 3px black; */
+	/* box-shadow: 0 0 0 0.2rem rgb(135, 241, 215); */
+    /* background-color: rgb(160, 250, 227); */
+    /* border: 4px solid; */
+    /* border-color: darkorange; */
+    /* padding: 30px; */
 
     /* text-align: center; */
-}
+/* } */
 .form-group3{
     text-align: center;
 
@@ -112,7 +115,7 @@ input{
     padding:5px 5px 5px 5px;
     width: 150px;
     border-radius: 5px;
-    box-shadow: black;
+    /* box-shadow: 4px 4px 4px 4px black; */
     margin-top: 5px;
     border : 2px solid;
     border-color: black;
@@ -130,3 +133,17 @@ input{
     background-color: white;
     color:black;
   }
+  .delete{
+    display: "flex";
+    text-align: center;
+  }
+  .footer1{
+      text-align: center;
+  }
+  .header1 {
+    color: black;
+    font-size: 32px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    text-align: center;
+}
