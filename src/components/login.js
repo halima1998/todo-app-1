@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import Header from "./HR/header";
 
 const intialState = {
   email:'',
@@ -58,6 +59,9 @@ class Login extends React.Component {
     
     render(){
         return (
+          <div>
+                 <Header/>
+       
         <div className="base-container">
             <div className="container">
             <div className ="header" >Login</div>
@@ -89,6 +93,7 @@ class Login extends React.Component {
             </div>
             </div>
         </div> 
+        </div>
         );
     }
 }

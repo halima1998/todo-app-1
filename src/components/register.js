@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from "axios"; // fetch, request, xmlHTTPrequest, AJAX.
-
-
+import Header from "./HR/header";
 
 const intialState = {
   name: '',
@@ -67,6 +66,8 @@ class Register extends React.Component {
     
     render() {
         return (
+          <div>
+            <Header/>
         <div className="base-container">
             <div className="container1">
             <div className ="header" >Register Form</div>
@@ -115,6 +116,7 @@ class Register extends React.Component {
               </button>
           </div>
           </div>
+        </div>
         </div>
     );
   }
