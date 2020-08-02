@@ -1,5 +1,4 @@
 import React from 'react';
-import "/home/mkhalil/Projects/todo/node_modules/bootstrap/scss/bootstrap.scss";
 // import logo from './logo.svg';
 import './App.css';
 import "./components/style.css";
@@ -8,8 +7,8 @@ import Login from "./components/login";
 import Register from "./components/register"
 import LandingPage from "./components/landingPage";
 import history from "./utils/history";
-// import TodoForm from "./components/todoForm";
-
+import app from "./components/app";
+import"../node_modules/bootstrap/dist/css/bootstrap.css";
 
 
 
@@ -20,8 +19,7 @@ function Approuter() {
         <Route path="/" exact component={LandingPage} />
         <Route path="/register" component={Register} />
         <Route path="/login"  component={Login} />
-        {/* <Route path="/list" component={list} /> */}
-        {/* <Route path="/listItems" component={ListItems}/> */}
+        <Route path="/app" component={app}></Route>
       </Switch>
       </Router>
   )

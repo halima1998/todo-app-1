@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Header from "./HR/header";
 import Footer from "./HR/footer";
+
 export default class LandingPage extends Component {
     render() {
         return (

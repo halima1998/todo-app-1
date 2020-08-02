@@ -41,7 +41,7 @@ class Login extends React.Component {
     axios.post("verify", {}, config)
     .then((res2) => {
       localStorage.setItem("user", JSON.stringify(res2.data.user))
-      history.push('/TodoList', {todo: res2.data.todo})
+      history.push('/app', {todo: res2.data.todo})
     })
     }).catch((err) => {
         console.log (err)
@@ -63,7 +63,7 @@ class Login extends React.Component {
                  <Header/>
        
         <div className="base-container">
-            <div className="container">
+            <div className="container2">
             <div className ="header" >Login</div>
             <div className ="content">
                  <div className="form">
@@ -87,7 +87,7 @@ class Login extends React.Component {
                  </div>
             </div>
             <div className="footer">
-              <button type="button"className="btn" onClick={this.handleSubmit}>
+              <button type="button" className="btn btn-primary" onClick={this.handleSubmit}>
                 Login
               </button>
             </div>

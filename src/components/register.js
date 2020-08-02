@@ -111,7 +111,7 @@ class Register extends React.Component {
             </div>
           
           <div className="footer">
-            <button type="button" className="btn" onClick={this.handleSubmit}>
+            <button type="button" className="btn btn-primary" onClick={this.handleSubmit}>
               Register
               </button>
           </div>
