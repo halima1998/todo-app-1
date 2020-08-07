@@ -44,7 +44,7 @@ class Register extends React.Component {
     .then(res => {
       console.log(res.data)
       if(res.data){
-        history.push('/login')
+        history.push('/app')
       }
       else{
         alert("email address is already exist")
@@ -111,7 +111,7 @@ class Register extends React.Component {
             </div>
           
           <div className="footer">
-            <button type="button" className="btn btn-primary" onClick={this.handleSubmit}>
+            <button type="button" className="btn1" onClick={this.handleSubmit}>
               Register
               </button>
           </div>
