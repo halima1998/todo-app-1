@@ -102,7 +102,14 @@ export default class app extends Component {
     render() {
         return (
             <body>
-                <Header/>
+                  <nav class="navbar">
+                    <div class="brand-title">Home</div>
+                    <div class="navbar-links">
+                      <ul>
+                        <li><a href="/">Log out</a></li>
+                      </ul>
+                    </div>
+                  </nav>
             <div className="container4">
                 <div className="row">
                     <div className="col-10 mx-auto col-md-8 mt-4">

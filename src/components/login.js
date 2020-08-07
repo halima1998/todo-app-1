@@ -60,7 +60,15 @@ class Login extends React.Component {
     render(){
         return (
           <div>
-                 <Header/>
+               <nav class="navbar">
+                 <div class="brand-title"><a style={{textDecoration:'none'}} href="/">Home</a></div>
+                 <div class="navbar-links">
+                   <ul>
+                     <li><a href="/login">Login</a></li>
+                     <li><a href="/register">Register</a></li>
+                   </ul>
+                 </div>
+               </nav>
        
         <div className="base-container">
             <div className="container2">

@@ -9,6 +9,8 @@ body{
     margin-top: 40px;
     align-items: center;   
 }
+
+
 .container1{
     margin-top:20px;
     width: 330px;
@@ -159,23 +161,39 @@ input{
 .page-footer{
     background-color: rgb(145, 166, 187);
 }
-.foot li a{
+.list-unstyled li a {
     text-decoration: none;
-
+    color: black;
 }
-.col1{
-   margin: 30px;
-   margin-left: 100px;
-   background-color: rgb(194, 207, 253);
+.list-unstyled li a:hover {
+    color:blue;
 }
-.col{
-    margin: 30px;
-    background-color: rgb(194, 207, 253);
- }
 img{
     height: 400px;
     width: 100%;
 }
 
-
-  
+ .card1 {
+    box-shadow:2px 5px 20px 10px grey;
+    color:black;
+    float: left;
+    width:350px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    height:300px;
+ }
+ .card p {
+    font-size: 18px;
+ }
+ .cardContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+ }
+ @media screen and (max-width: 600px) {
+    .card {
+       width: 100%;
+    }
+ }
+ 
